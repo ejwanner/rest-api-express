@@ -9,7 +9,7 @@ describe('Auth Controller', function () {
   before(function (done) {
     mongoose
       .connect(
-
+        // ! set up database connection
       )
       .then(result => {
         const user = new User({
