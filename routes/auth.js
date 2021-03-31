@@ -14,7 +14,7 @@ router.put(
   [
     body('email')
     .isEmail()
-    .withMessage('Please enter a valid email.')
+    .withMessage('Please enter a valid email adress')
     .custom((value, {
       req
     }) => {
@@ -22,7 +22,7 @@ router.put(
         email: value
       }).then(userDoc => {
         if (userDoc) {
-          return Promise.reject('E-Mail address already exists!');
+          return Promise.reject('the email address already exists!');
         }
       });
     })

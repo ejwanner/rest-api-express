@@ -4,7 +4,7 @@ const sinon = require('sinon');
 
 
 describe('Auth middleware', function () {
-  it('should throw an error if no authorization header is present', function () {
+  it('should throw an error if no authorization header is present!', function () {
     const req = {
       get: function (headerName) {
         return null;
@@ -15,7 +15,7 @@ describe('Auth middleware', function () {
     );
   });
 
-  it('should throw an error if the authorization header is only one string', function () {
+  it('should throw an error if the authorization header is only one string!', function () {
     const req = {
       get: function (headerName) {
         return 'xyz';
@@ -27,7 +27,7 @@ describe('Auth middleware', function () {
   it('should yield a userId after decoding the token', function () {
     const req = {
       get: function (headerName) {
-        return 'Bearer djfkalsdjfaslfjdlas';
+        return 'Bearer test';
       }
     };
     sinon.stub(jwt, 'verify');
@@ -41,7 +41,7 @@ describe('Auth middleware', function () {
     jwt.verify.restore();
   });
 
-  it('should throw an error if the token cannot be verified', function () {
+  it('should throw an error if the token can not be verified', function () {
     const req = {
       get: function (headerName) {
         return 'Bearer xyz';
