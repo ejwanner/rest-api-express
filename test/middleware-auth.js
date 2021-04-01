@@ -4,7 +4,7 @@ const sinon = require('sinon');
 
 
 describe('Auth middleware', function () {
-  it('should throw an error if no authorization header is present!', function () {
+  it('should throw an error if no header with authorization is available', function () {
     const req = {
       get: function (headerName) {
         return null;

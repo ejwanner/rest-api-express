@@ -14,7 +14,7 @@ router.put(
   [
     body('email')
     .isEmail()
-    .withMessage('Please enter a valid email adress')
+    .withMessage('Please enter a valid email address!')
     .custom((value, {
       req
     }) => {
