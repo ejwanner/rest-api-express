@@ -22,7 +22,7 @@ router.put(
         email: value
       }).then(userDoc => {
         if (userDoc) {
-          return Promise.reject('the email address already exists!');
+          return Promise.reject('this email address already exists!');
         }
       });
     })
