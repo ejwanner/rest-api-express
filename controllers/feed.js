@@ -38,12 +38,12 @@ exports.getPosts = async (req, res, next) => {
 exports.createPost = async (req, res, next) => {
   const errors = validationResult(req);
   if (!errors.isEmpty()) {
-    const error = new Error('Validation failed, entered data is incorrect.');
+    const error = new Error('Validation failed, the entered data is incorrect.');
     error.statusCode = 422;
     throw error;
   }
   if (!req.file) {
-    const error = new Error('No image provided!');
+    const error = new Error('No image was provided!');
     error.statusCode = 422;
     throw error;
   }

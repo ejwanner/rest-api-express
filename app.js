@@ -74,7 +74,7 @@ mongoose
       }
     });
     io.on('connection', socket => {
-      console.log('Client connected');
+      console.log('Client is with socket.io connected');
     })
   })
   .catch(err => console.log(err))

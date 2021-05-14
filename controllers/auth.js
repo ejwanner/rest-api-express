@@ -61,7 +61,7 @@ exports.login = async (req, res, next) => {
         email: loadedUser.email,
         userId: loadedUser._id.toString()
       },
-      'supersecrettokenstring', {
+      'supersecrettokenstringKannkeinererraten!!', {
         expiresIn: '1h'
       }
     );
