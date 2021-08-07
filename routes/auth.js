@@ -30,7 +30,7 @@ router.put(
     body('password')
     .trim()
     .isLength({
-      min: 5
+      min: 6
     }),
     body('name')
     .trim()
